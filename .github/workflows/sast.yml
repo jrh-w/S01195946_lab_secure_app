@@ -1,4 +1,6 @@
 name: Perform Mixeway Scan
+on:
+  workflow_dispatch:
 
 jobs:
   mixeway-scan:

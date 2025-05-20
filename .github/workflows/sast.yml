@@ -28,6 +28,8 @@ jobs:
           COMMIT_ID: ${{ steps.vars.outputs.sha_short }}
           BRANCH: ${{ steps.vars.outputs.branch }}
         run: |
+          mkdir -p /tmp/mixeway-scan
+          cp -r . /tmp/mixeway-scan
           docker run \
             -e OSS_USERNAME="$OSS_USERNAME" \
             -e OSS_KEY="$OSS_KEY" \
